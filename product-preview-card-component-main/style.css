@@ -1,0 +1,135 @@
+:root{
+  --primaryFont: "Montserrat", serif;
+  --secFont: "Fraunces", serif;
+  --primaryDarkcyan: hsl(158, 36%, 37%);
+  --primaryVerydarkcyan: hsl(158, 81%, 18%);
+  --primaryCream: hsl(30, 38%, 92%);
+  --neutralVerydarkblue: hsl(212, 21%, 14%);
+  --neutralDarkgrayishblue: hsl(228, 12%, 48%);
+  --neutralWhite: hsl(0, 0%, 100%);
+}
+*,
+*::after,
+*::before{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+}
+html,
+body{
+  height: 100%;
+}
+body{
+  background: var(--primaryCream);
+  font-family: var(--primaryFont);
+  font-size: 14px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+h2,
+h6{
+  font-family: var(--secFont);
+  margin-bottom: 15px;
+}
+p{
+  margin-bottom: 15px;
+}
+img{
+  max-width: 100%;
+}
+#card{
+  width: 600px;
+  display: flex;
+}
+#avater{
+  flex-basis: 50%;
+}
+#avater img.desktop{
+  display: block;
+  border-radius: 10px 0 0 10px;
+}
+#avater img.mobile{
+  display: none;
+  border-radius: 10px 10px 0 0;
+}
+#dscrib{
+  background: var(--neutralWhite);
+  flex-basis: 50%;
+  border-radius: 0 10px 10px 0;
+  padding: 30px;
+}
+#dscrib h2{
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--neutralVerydarkblue);
+}
+#dscrib h6{
+  font-size: 14px;
+  text-transform: uppercase;
+  color: var(--neutralDarkgrayishblue);
+  letter-spacing: 5px;
+  font-family: var(--primaryFont);
+  font-weight: 500;
+}
+#dscrib p{
+  color: var(--neutralDarkgrayishblue);
+  line-height: 1.5em;
+}
+#dscrib p.price{
+  font-family: var(--secFont);
+  font-size: 32px;
+  color: var(--primaryDarkcyan);
+}
+#dscrib p.price span{
+  font-family: var(--primaryFont);
+  font-size: 14px;
+  text-decoration: line-through;
+  position: relative;
+  top: -5px;
+  padding-left: 15px;
+}
+#dscrib button{
+  background: var(--primaryDarkcyan);
+  width: 100%;
+  color: var(--neutralWhite);
+  font-family: var(--primaryFont);
+  font-size: 14px;
+  font-weight: 500;
+  padding: 15px;
+  border: 0;
+  border-radius: 10px;
+  cursor: pointer;
+}
+#dscrib button:hover{
+  background: var(--primaryVerydarkcyan);
+}
+#dscrib button img{
+  display: inline-block;
+  padding-right: 15px;
+  position: relative;
+  top: 3px;
+}
+
+/* Responsive */
+@media only screen and (max-width: 600px){
+  body{
+    align-items: flex-start;
+  }
+  #card{
+    flex-direction: column;
+    width: 90%;
+    margin-top: 20px;
+  }
+  #avater img.desktop{
+    display: none;
+  }
+  #avater img.mobile{
+    display: block;
+  }
+  #dscrib{
+    border-radius: 0 0 10px 10px;
+  }
+}
